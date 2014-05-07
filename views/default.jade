@@ -1,6 +1,24 @@
 doctype html
 html
   head
+    meta(name="viewport", content="width=device-width, initial-scale=1")
     title Server-side JavaScript and YOU!
+    link(href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", rel="stylesheet")
   body
-    block content
+    .navbar.navbar-inverse.navbar-fixed-top(role="navigation")
+      .container
+        .navbar-header
+          button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand Server-side JavaScript and YOU!
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a Home
+    .container(style="margin-top: 60px")
+      block content
+
+    script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
