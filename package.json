@@ -19,5 +19,12 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/orbiteleven/nodejs-talk/issues"
+  },
+  "dependencies": {
+    "express": "~4.1.1",
+    "socket.io": "~0.9.16"
+  },
+  "devDependencies": {
+    "gulp": "~3.4.0"
   }
 }
