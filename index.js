@@ -8,7 +8,7 @@ app.set('view engine', 'jade');
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Hello World' });
+  res.render('index', { title: 'Example chat server' });
 });
 
 app.get('/about', function (req, res) {
@@ -17,4 +17,15 @@ app.get('/about', function (req, res) {
 
 var server = app.listen(3000, function () {
   console.log('Listening on port %d', server.address().port);
+});
+
+var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function (socket) {
+  socket.emit('message', 'Chat server connected');
+
+  socket.on('send', function (data) {
+    console.log('Message received: ' + data);
+    socket.broadcast.emit('message', data);
+  });
 });
