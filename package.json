@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-talk",
+  "version": "0.0.0",
+  "description": "A demo app in Node.js for ABQ Web Geeks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:orbiteleven/nodejs-talk.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs",
+    "socketio"
+  ],
+  "author": "Damon Toal-Rossi <damontr@gmail.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/orbiteleven/nodejs-talk/issues"
+  }
+}
